@@ -1,3 +1,54 @@
-<script>
-    
-</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="list">
+        <li class="list">1번</li>
+        <li class="list">2번</li>
+        <li class="list">3번</li>
+        <li class="list">4번</li>
+        <li class="list">5번</li>
+        <li class="list">6번</li>
+        <li class="list">7번</li>
+        <li class="list">8번</li>
+        <li class="list">9번</li>
+        <li class="list">10번</li>
+    </ul>
+    <script>
+        for(let i=0; i<10; i++) {
+            document.querySelectorAll('.list')[i].addEventListener('click', function(e) {
+                console.log(i);
+                console.log(document.querySelectorAll('.list')[i].innerHTML);
+            });
+        }
+        var arr = [1, 2, 3, 4, 5];
+        var arr2 = [...arr]; //스프레드 오퍼레이터 펼침 연산자로 디카피를 시킴
+        console.log(arr, arr2);
+        arr2[5] = 6;
+        console.log(arr, arr2);
+
+        const a = [];
+        const obj = {};
+        obj.a = 'A';
+        obj.b = 'B'
+        console.log(obj);
+    </script>
+</body>
+</html>
+<!-- <script>
+    var a = 10; //전역변수
+    console.log(window);
+    let b = 10;
+    const c = 30;
+
+    for(let i=0; i<10; i++) {
+        console.log(i);
+    }
+    console.log(i);
+
+</script> -->
